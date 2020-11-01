@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+</head>
+
+<body>
+<a-scene>
+  <a-assets>
+  
+	<a-asset-item id="bajra" src="./assets/bajra/scene.gltf"></a-asset-item>
+    <img id="sky" src="./assets/sky1.jpg">
+	<a-asset-item id="portal" src="./assets/portal/scene.gltf"></a-asset-item>
+  </a-assets>
+  
+  
+    <a-camera position="-20.406 5.464 12.118" rotation="0 -90 0" wasd-controls="fly:true;">
+		<a-cursor intersection-spawn="Event:click; mixin:voxel;" color="#FF0000"></a-cursor>
+	</a-camera>
+	<a-sky src="#sky"></a-sky>
+	<a-entity id="portallo" gltf-model="#portal" color="#FF0000" position="-5.762 8.005 13.203" scale="1 1 1"  rotation="0 -97.251 0"></a-entity>
+	<a-entity id="bajraModel" gltf-model="#bajra" position="0 23.668 -3.825"   rotation="0 0 0"></a-entity>
+	
+	<a-entity troika-text="value:Bajra Sandhi;fontSize:0.5;color:#A19D194;outlineColor:#000000;outlineWidth:0.05;" position="-20.396 6.112 7.656" rotation="0 0 0" troika-text-material="shader: standard; metalness: 0.5;"></a-entity>
+</a-scene>
+</body>
+<script>
+document.querySelector("#portallo").addEventListener("mouseenter", e=>{
+		location.href="index.html";
+	     
+});
+</script> 
+</html>

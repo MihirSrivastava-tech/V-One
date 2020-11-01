@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+</head>
+
+<body>
+<a-scene>
+  <a-assets>
+	<a-asset-item id="ellora" src="./assets/ellora/scene.gltf"></a-asset-item>
+    <img id="sky" src="./assets/sky1.jpg">
+	<a-asset-item id="portal" src="./assets/portal/scene.gltf"></a-asset-item>
+  </a-assets>
+  
+  
+    <a-camera position="-227.02314 -221.11429 763.08541" rotation="0 0 180" wasd-controls="fly:true;">
+		<a-cursor intersection-spawn="Event:click; mixin:voxel;"></a-cursor>
+	</a-camera>
+
+	
+	<a-entity id="elloraModel" gltf-model="#ellora" position="0 -30.16194 0"   rotation="0 0 0"></a-entity>
+	<a-entity id="ajanta" gltf-model="#portal" color="#FF0000" position="-227.02314 -220.11429 770.08541" scale="1 1 1"  rotation="0 0 0"></a-entity>
+	<a-entity troika-text="value:Ajanta Ellora;fontSize:0.5;color:#A19D194;outlineColor:#000000;outlineWidth:0.05;" position="-230.02314 -222.11429 760.08541" troika-text-material="shader: standard; metalness: 0.5;"></a-entity>
+</a-scene>
+</body>
+<script>
+document.querySelector("#ajanta").addEventListener("mouseenter", e=>{
+	     location.href="index.html";
+});
+</script>
+</html>

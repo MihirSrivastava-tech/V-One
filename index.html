@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+</head>
+
+<body>
+<a-scene>
+  <a-assets>
+    <img id="1" src="./assets/bajra.jfif">
+	<img id="2" src="./assets/ellora.jpg">
+	<img id="3" src="./assets/lotus.jfif">
+	<img id="4" src="./assets/taj.jfif">
+	<a-asset-item id="park" src="./assets/park/scene.gltf"></a-asset-item>
+    <a-asset-item id="vikram" src="./assets/park/vikram/scene.gltf"></a-asset-item>
+	<a-asset-item id="pragyan" src="./assets/park/pragyan/scene.gltf"></a-asset-item>
+	<a-asset-item id="portal" src="./assets/portal/scene.gltf"></a-asset-item>
+  </a-assets>
+  
+    <a-sky radius="6000" color="#000000"></a-sky>
+	<a-entity light="type:directional; color:#FFF; intensity:4.030;" position="-0.500 40.763 1">
+    <a-camera position="3.728 2.008 3.255" rotation="0 0 0" wasd-controls="fly:true;">
+		<a-cursor intersection-spawn="Event:click; mixin:voxel;" color="#FFFFFF"></a-cursor>
+	</a-camera>
+	
+	<a-entity id="portallo" gltf-model="#portal" color="#FF0000" position="8.541 -303.991 13.203" scale="1 1 1"  rotation="0 -138.821 0"></a-entity>
+	<a-entity id="park" gltf-model="#park" position="-4.813 0.537 0"   rotation="0 0 0"></a-entity
+	<!--ROVER-->
+	<a-entity id="pragyan" gltf-model="#pragyan" position="-9.226 -32.655 -172.14058"   rotation="0 -37.914 0" scale="0.3 0.3 0.3"></a-entity>
+	<a-entity id="vikram" gltf-model="#vikram" position="101.040 -15.462 43.472"   rotation="0 -133.516 0" scale="0.3 0.3 0.3"></a-entity>
+	<a-image id="bajra" src="#1" position="14.845 0.000 -26.037" rotation="0 0 0" scale="4 4 4"></a-image>
+	<a-image id="ellora" src="#2" position="-21.149 0.000 -9.345" rotation="0 73.617 0" scale="4 4 4"></a-image>
+	<a-image id="lotus" src="#3" position="-11.274 0.000 -22.509" rotation="0 52.742 0" scale="4 4 4"></a-image>
+	<a-image id="taj" src="#4" position="2.439 0.000 26.460" rotation="0 180 0" scale="4 4 4"></a-image>
+</a-scene>
+</body>
+<script>
+document.querySelector("#portallo").addEventListener("mouseenter", e=>{
+			
+	     window.postMessage('INJECT_AFRAME_INSPECTOR','*');
+});
+document.querySelector("#ellora").addEventListener("mouseenter", e=>{
+	location.href="ellora.html";
+	
+});
+document.querySelector("#lotus").addEventListener("mouseenter", e=>{
+	location.href="lotus.html";
+	
+});
+document.querySelector("#bajra").addEventListener("mouseenter", e=>{
+	location.href="bali.html";
+	
+});
+document.querySelector("#taj").addEventListener("mouseenter", e=>{
+	location.href="taj.html";
+	
+});
+</script> 
+</html>
