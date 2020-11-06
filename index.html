@@ -20,10 +20,11 @@
   
     <a-sky radius="6000" color="#000000"></a-sky>
 	<a-entity light="type:directional; color:#FFF; intensity:4.030;" position="-0.500 40.763 1">
-    <a-camera position="3.728 2.008 3.255" rotation="0 0 0" wasd-controls="fly:true;">
+	<a-entity id="rig" position="3.728 2.008 3.255">
+    <a-camera rotation="0 0 0" wasd-controls="fly:true;">
 		<a-cursor intersection-spawn="Event:click; mixin:voxel;" color="#FFFFFF"></a-cursor>
 	</a-camera>
-	
+	</a-entity>
 	<a-entity id="portallo" gltf-model="#portal" color="#FF0000" position="8.541 -303.991 13.203" scale="1 1 1"  rotation="0 -138.821 0"></a-entity>
 	<a-entity id="park" gltf-model="#park" position="-4.813 0.537 0"   rotation="0 0 0"></a-entity
 	<!--ROVER-->
