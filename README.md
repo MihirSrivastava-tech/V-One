@@ -15,4 +15,9 @@ their beauty with help of virtual reality.
 ## Tools Used:
 1)  V-One is made using 3d models deployed with the help of A-frame.
 2)  We have used blender to edit the models
+<<<<<<< HEAD
 3)  Aframe is based on three.js library.
+=======
+3)  Aframe is based on three.js library.
+
+>>>>>>> e6261de3f78ca88c36346211682f03ee8da4ba41
